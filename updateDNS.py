@@ -6,8 +6,6 @@ import requests, os
 zoneId = '/hostedzone/xxxx'
 hostedZone = 'xxxx'
 
-hostName = os.environ.get('ENV_MIGHT_EXIST')
-
 def updateDNS (ip, hostName):
   client = boto3.client('route53')
   boto3.set_stream_logger('botocore')
